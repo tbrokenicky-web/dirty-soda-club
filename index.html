@@ -1,78 +1,3 @@
-
-Outlining steps to publish a site with GitHub Pages.
-Outlining steps to publish a site with GitHub Pages.
-Here are the GitHub Pages steps. GitHub’s layout changes now and then, so follow the on-screen labels if they differ slightly from mine.
-
-Set up
-
-Go to github.com and sign in, or create a free account.
-Click the + in the top right and choose New repository.
-Name it something like dirty-soda-club. Set it to Public, since free Pages needs that. Tick Add a README file so the repo isn’t empty, then click Create repository.
-Upload the file
-
-Make sure your file is renamed to index.html.
-On the repository page, click Add file → Upload files.
-Drag index.html into the box, wait for it to finish, then click Commit changes.
-Turn on Pages
-
-Click the Settings tab at the top of the repository.
-In the left sidebar, click Pages.
-Under Build and deployment, set Source to Deploy from a branch.
-Under Branch, choose main and the / (root) folder, then click Save.
-Get your link
-
-Wait one to two minutes, then refresh the Pages settings. A box appears saying your site is live, with the address.
-The link looks like https://yourusername.github.io/dirty-soda-club/.
-Open it on your computer and your phone, and test the drink builder.
-Things to know
-
-Your GitHub username will be in the link. If this is for their business, consider making a free account named after the business, like thedirtysodaclub, and hosting it there. Their link then becomes thedirtysodaclub.github.io/... and looks more professional. It also lets them own it later.
-Updating the page later: open index.html in the repository, click the pencil icon to edit, make your change, and commit. The live page updates in a minute or two.
-If you get a 404: the file isn’t named exactly index.html, it was uploaded into a subfolder, or Pages hasn’t finished building. Check the file name first, then wait a couple of minutes.
-Once it’s live, use that link in your message to them. If anything fails, tell me which step you’re stuck on and what you see.
-
-Screenshot 2026-10-18 at 3.25.27 PM.png
-Screenshot 2026-10-18 at 3.25.25 PM.png
-Screenshot 2026-10-18 at 3.25.23 PM.png
-
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> <title>The Dirty Soda Club | Custom dirty sodas in Lincoln, NE</title> <meta name="description" content="Custom mixes, luxe flavors and feel-good vi
-
-pasted
-
-add these events into the code
-
-Edited a file, shared files
-I added every event from your three screenshots to the updated dirty-soda-club.html, 11 in all:
-
-Oct 10 and 11: Lincoln Nerd Fest
-Oct 15: Bootox & Boobies
-Oct 16: Food Truck Friday and Makers Market
-Oct 17: Heartwood Kite Festival
-Oct 18: Grey Artizan
-Oct 23: Food Truck Friday and LNK Movie Night
-Oct 24: Elkhorn South Craft Fair
-Oct 30: Food Truck Friday
-The page only shows events from today on, so today’s Grey Artizan (3pm to 9pm) will be the first one listed. The earlier ones stay in the code and just won’t appear. From tomorrow on, the page will start with Food Truck Friday on Oct 23.
-
-Some of the zip codes and street numbers were small in the screenshots, so check the addresses against the original flyer before you share the page. The ones I’m least sure of are the Omaha zips (68154 and 68130) and the 2719 N 84th St address.
-
-To use this version, replace the file in your GitHub repository:
-
-Open index.html in your repository and click the pencil icon.
-Select all the code, delete it, and paste in the new file’s contents.
-Click Commit changes, and the live page updates in a minute or two.
-To add future events, add a new line in the same format inside the EVENTS list, using the date format YYYY-MM-DD.
-
-
-Dirty soda club
-Code·HTML 
-
-
-
-Claude is AI and can make mistakes.
-
-
-Dirty soda club · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,7 +40,7 @@ h1,h2{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0}
 h2{font-size:2rem;margin-bottom:6px}
 .sub{color:var(--muted);margin:0 0 18px}
 section{padding-top:44px}
- 
+
 /* hero */
 .hero{text-align:center;padding-top:48px}
 .wordmark{font-size:clamp(3rem,15vw,5.4rem);letter-spacing:-.02em;color:var(--pink)}
@@ -127,7 +52,7 @@ section{padding-top:44px}
   background:var(--pink);color:var(--on-pink);border:2px solid var(--pink);cursor:pointer;font:inherit;font-weight:700}
 .btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
 .btn:hover{filter:brightness(1.07)}
- 
+
 /* builder */
 .panel{background:var(--card);border:2px solid var(--line);border-radius:28px;padding:22px}
 fieldset{border:0;margin:0 0 18px;padding:0}
@@ -142,7 +67,7 @@ textarea{width:100%;min-height:104px;border-radius:16px;border:2px solid var(--l
   color:var(--ink);font:inherit;padding:12px;resize:vertical}
 .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .note{font-size:.9rem;color:var(--muted);margin:10px 0 0;min-height:1.4em}
- 
+
 /* events */
 .events{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 .ev{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;background:var(--card);
@@ -152,7 +77,7 @@ textarea{width:100%;min-height:104px;border-radius:16px;border:2px solid var(--l
 .ev h3{margin:0;font-size:1.05rem}
 .ev p{margin:2px 0 0;color:var(--muted);font-size:.95rem}
 .empty{background:var(--card);border:2px dashed var(--line);border-radius:20px;padding:18px}
- 
+
 /* pay + footer */
 .pay{display:grid;gap:10px}
 .pay a{display:flex;justify-content:space-between;align-items:center;text-decoration:none;background:var(--card);
@@ -176,7 +101,7 @@ footer{margin-top:44px;text-align:center;color:var(--muted)}
       <a class="btn alt" href="#events">Where to find us</a>
     </div>
   </header>
- 
+
   <section id="order">
     <h2>Build your drink</h2>
     <p class="sub">Pick your mix, then send it to us. We'll confirm it and tell you when it's ready.</p>
@@ -218,19 +143,19 @@ footer{margin-top:44px;text-align:center;color:var(--muted)}
       <p class="note" id="note" role="status"></p>
     </div>
   </section>
- 
+
   <section id="events">
     <h2>Where to find us</h2>
     <p class="sub">Upcoming pop-ups. Past events drop off on their own.</p>
     <ul class="events" id="evlist"></ul>
   </section>
- 
+
   <section id="book">
     <h2>Book us for your party</h2>
     <p class="sub">Birthdays, showers, school events and company parties. Tell us the date, headcount and flavors you want.</p>
     <a class="btn" href="https://www.instagram.com/thedirtysodaclub402" target="_blank" rel="noopener">Message us to book</a>
   </section>
- 
+
   <section id="pay">
     <h2>Pay for your order</h2>
     <p class="sub">Already ordered? Use whichever you like.</p>
@@ -241,7 +166,7 @@ footer{margin-top:44px;text-align:center;color:var(--muted)}
       <a href="https://square.link/u/7PLmI2Lo?src=sheet" target="_blank" rel="noopener">Pay online with card, option 2 <small>Square</small></a>
     </div>
   </section>
- 
+
   <footer>
     <div class="soc">
       <a href="https://www.instagram.com/thedirtysodaclub402" target="_blank" rel="noopener">Instagram</a>
@@ -251,7 +176,7 @@ footer{margin-top:44px;text-align:center;color:var(--muted)}
     <div>The Dirty Soda Club, Lincoln, NE</div>
   </footer>
 </main>
- 
+
 <script>
 /* ---- EDIT YOUR EVENTS HERE: date is YYYY-MM-DD ---- */
 var EVENTS=[
@@ -268,7 +193,7 @@ var EVENTS=[
   {date:"2026-10-30",name:"Food Truck Friday",where:"403 Line Drive Circle, Lincoln, NE 68508",time:"11am to 2pm"}
   /* add more: {date:"2026-11-06",name:"Event name",where:"Address",time:"Time"}, */
 ];
- 
+
 (function(){
   var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   var now=new Date(),today=now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0")+"-"+String(now.getDate()).padStart(2,"0");
@@ -285,7 +210,7 @@ var EVENTS=[
     var s=document.createElement("p");s.textContent=[e.time,e.where].filter(Boolean).join(" at ");
     t.appendChild(h);t.appendChild(s);li.appendChild(d);li.appendChild(t);list.appendChild(li);
   });
- 
+
   /* drink builder */
   var msg=document.getElementById("msg"),note=document.getElementById("note");
   var boxes=[].slice.call(document.querySelectorAll("#flavors input"));
@@ -316,7 +241,3 @@ var EVENTS=[
 </script>
 </body>
 </html>
- 
-
-
-Claude finished the response
