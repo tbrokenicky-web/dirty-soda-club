@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Dirty Soda Club | Custom dirty sodas in Lincoln, NE</title>
+<meta name="description" content="Custom mixes, luxe flavors and feel-good vibes. Dirty sodas, pop-ups and party catering in Lincoln, Nebraska.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdeef0; --card:#fff8f4; --ink:#3b1522; --muted:#7a4a5a;
+  --pink:#e8478b; --cherry:#c4163f; --line:#f0c9d3; --on-pink:#fff;
+  --serif:"Gloock",Georgia,"Times New Roman",serif;
+  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#2a0f1a; --card:#3a1826; --ink:#ffe9ee; --muted:#e2b3c1;
+    --pink:#ff6aa5; --cherry:#ff7a93; --line:#5a2a3d; --on-pink:#2a0f1a;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#2a0f1a; --card:#3a1826; --ink:#ffe9ee; --muted:#e2b3c1;
+  --pink:#ff6aa5; --cherry:#ff7a93; --line:#5a2a3d; --on-pink:#2a0f1a;
+  color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cherry);outline-offset:3px;border-radius:8px}
+main{max-width:640px;margin:0 auto;padding:0 20px 56px}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0}
+h2{font-size:2rem;margin-bottom:6px}
+.sub{color:var(--muted);margin:0 0 18px}
+section{padding-top:44px}
+
+/* hero */
+.hero{text-align:center;padding-top:48px}
+.wordmark{font-size:clamp(3rem,15vw,5.4rem);letter-spacing:-.02em;color:var(--pink)}
+.wordmark span{display:block;font-size:.42em;letter-spacing:.01em;color:var(--ink)}
+.tag{margin:14px auto 6px;max-width:30ch;font-size:1.15rem}
+.loc{color:var(--muted);margin:0 0 24px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;
+  background:var(--pink);color:var(--on-pink);border:2px solid var(--pink);cursor:pointer;font:inherit;font-weight:700}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn:hover{filter:brightness(1.07)}
+
+/* builder */
+.panel{background:var(--card);border:2px solid var(--line);border-radius:28px;padding:22px}
+fieldset{border:0;margin:0 0 18px;padding:0}
+legend{font-weight:700;margin-bottom:8px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chips span{display:block;padding:9px 16px;border-radius:999px;border:2px solid var(--line);background:var(--bg)}
+.chips input:checked+span{background:var(--pink);border-color:var(--pink);color:var(--on-pink);font-weight:700}
+.chips input:focus-visible+span{outline:3px solid var(--cherry);outline-offset:2px}
+textarea{width:100%;min-height:104px;border-radius:16px;border:2px solid var(--line);background:var(--bg);
+  color:var(--ink);font:inherit;padding:12px;resize:vertical}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.note{font-size:.9rem;color:var(--muted);margin:10px 0 0;min-height:1.4em}
+
+/* events */
+.events{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ev{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;background:var(--card);
+  border:2px solid var(--line);border-radius:20px;padding:12px 16px}
+.date{text-align:center;font-family:var(--serif);color:var(--cherry);line-height:1}
+.date b{display:block;font-size:1.9rem;font-weight:400}
+.ev h3{margin:0;font-size:1.05rem}
+.ev p{margin:2px 0 0;color:var(--muted);font-size:.95rem}
+.empty{background:var(--card);border:2px dashed var(--line);border-radius:20px;padding:18px}
+
+/* pay + footer */
+.pay{display:grid;gap:10px}
+.pay a{display:flex;justify-content:space-between;align-items:center;text-decoration:none;background:var(--card);
+  border:2px solid var(--line);border-radius:18px;padding:14px 18px;font-weight:700}
+.pay a small{font-weight:400;color:var(--muted)}
+.pay a:hover{border-color:var(--pink)}
+footer{margin-top:44px;text-align:center;color:var(--muted)}
+.soc{display:flex;gap:18px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+.soc a{font-weight:700;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1 class="wordmark"><span>The</span>Dirty Soda Club</h1>
+    <p class="tag">Custom mixes, luxe flavors and feel-good vibes.</p>
+    <p class="loc">Lincoln, NE</p>
+    <div class="cta">
+      <a class="btn" href="#order">Build your drink</a>
+      <a class="btn alt" href="#events">Where to find us</a>
+    </div>
+  </header>
+
+  <section id="order">
+    <h2>Build your drink</h2>
+    <p class="sub">Pick your mix, then send it to us. We'll confirm it and tell you when it's ready.</p>
+    <div class="panel">
+      <fieldset>
+        <legend>Soda base</legend>
+        <div class="chips" data-group="base">
+          <label><input type="radio" name="base" value="Dr Pepper" checked><span>Dr Pepper</span></label>
+          <label><input type="radio" name="base" value="Coke"><span>Coke</span></label>
+          <label><input type="radio" name="base" value="Sprite"><span>Sprite</span></label>
+          <label><input type="radio" name="base" value="Mountain Dew"><span>Mountain Dew</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Flavors (pick up to 3)</legend>
+        <div class="chips" id="flavors">
+          <label><input type="checkbox" value="coconut"><span>Coconut</span></label>
+          <label><input type="checkbox" value="vanilla"><span>Vanilla</span></label>
+          <label><input type="checkbox" value="strawberry"><span>Strawberry</span></label>
+          <label><input type="checkbox" value="peach"><span>Peach</span></label>
+          <label><input type="checkbox" value="cherry"><span>Cherry</span></label>
+          <label><input type="checkbox" value="lime"><span>Lime</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Finish</legend>
+        <div class="chips">
+          <label><input type="radio" name="finish" value="cream on top" checked><span>Cream on top</span></label>
+          <label><input type="radio" name="finish" value="no cream"><span>No cream</span></label>
+          <label><input type="radio" name="finish" value="cream and extra fruit"><span>Cream + fruit</span></label>
+        </div>
+      </fieldset>
+      <label for="msg"><b>Your order message</b></label>
+      <textarea id="msg" readonly></textarea>
+      <div class="row">
+        <button class="btn" type="button" id="copy">Copy message</button>
+        <a class="btn alt" id="dm" href="https://www.instagram.com/thedirtysodaclub402" target="_blank" rel="noopener">Open Instagram</a>
+      </div>
+      <p class="note" id="note" role="status"></p>
+    </div>
+  </section>
+
+  <section id="events">
+    <h2>Where to find us</h2>
+    <p class="sub">Upcoming pop-ups. Past events drop off on their own.</p>
+    <ul class="events" id="evlist"></ul>
+  </section>
+
+  <section id="book">
+    <h2>Book us for your party</h2>
+    <p class="sub">Birthdays, showers, school events and company parties. Tell us the date, headcount and flavors you want.</p>
+    <a class="btn" href="https://www.instagram.com/thedirtysodaclub402" target="_blank" rel="noopener">Message us to book</a>
+  </section>
+
+  <section id="pay">
+    <h2>Pay for your order</h2>
+    <p class="sub">Already ordered? Use whichever you like.</p>
+    <div class="pay">
+      <a href="https://venmo.com/u/thedirtysodaclub402" target="_blank" rel="noopener">Venmo <small>@thedirtysodaclub402</small></a>
+      <a href="https://cash.app/$thedirtysodaclub402" target="_blank" rel="noopener">Cash App <small>$thedirtysodaclub402</small></a>
+      <a href="https://square.link/u/MozLcOYm?src=sheet" target="_blank" rel="noopener">Pay online with card <small>Square</small></a>
+      <a href="https://square.link/u/7PLmI2Lo?src=sheet" target="_blank" rel="noopener">Pay online with card, option 2 <small>Square</small></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="soc">
+      <a href="https://www.instagram.com/thedirtysodaclub402" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/share/1KuADRQqGo/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.tiktok.com/@thedirtysodaclub4" target="_blank" rel="noopener">TikTok</a>
+    </div>
+    <div>The Dirty Soda Club, Lincoln, NE</div>
+  </footer>
+</main>
+
+<script>
+/* ---- EDIT YOUR EVENTS HERE: date is YYYY-MM-DD ---- */
+var EVENTS=[
+  {date:"2026-10-10",name:"Lincoln Nerd Fest",where:"SandHills Global, 4100 N 84th St, Lincoln",time:"10am to 6pm"},
+  {date:"2026-10-11",name:"Lincoln Nerd Fest",where:"SandHills Global, 4100 N 84th St, Lincoln",time:"10am to 4pm"},
+  {date:"2026-10-15",name:"Bootox & Boobies",where:"",time:"4pm to 7pm"}
+  /* add: {date:"2026-10-23",name:"Event name",where:"Address",time:"Time"}, */
+];
+
+(function(){
+  var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var now=new Date(),today=now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0")+"-"+String(now.getDate()).padStart(2,"0");
+  var list=document.getElementById("evlist");
+  var up=EVENTS.filter(function(e){return e.date>=today}).sort(function(a,b){return a.date<b.date?-1:1});
+  if(!up.length){
+    list.innerHTML='<li class="empty">No pop-ups posted right now. Check our <a href="https://www.instagram.com/thedirtysodaclub402" target="_blank" rel="noopener">Instagram</a> for the next one.</li>';
+  }
+  up.forEach(function(e){
+    var p=e.date.split("-"),li=document.createElement("li");li.className="ev";
+    var d=document.createElement("div");d.className="date";
+    d.innerHTML="<b></b>"+months[+p[1]-1];d.querySelector("b").textContent=+p[2];
+    var t=document.createElement("div"),h=document.createElement("h3");h.textContent=e.name;
+    var s=document.createElement("p");s.textContent=[e.time,e.where].filter(Boolean).join(" at ");
+    t.appendChild(h);t.appendChild(s);li.appendChild(d);li.appendChild(t);list.appendChild(li);
+  });
+
+  /* drink builder */
+  var msg=document.getElementById("msg"),note=document.getElementById("note");
+  var boxes=[].slice.call(document.querySelectorAll("#flavors input"));
+  function sel(n){var e=document.querySelector('input[name="'+n+'"]:checked');return e?e.value:""}
+  function build(){
+    var f=boxes.filter(function(b){return b.checked}).map(function(b){return b.value});
+    var fl=f.length?f.join(", "):"no added flavors";
+    msg.value="Hi! I'd like a "+sel("base")+" with "+fl+", "+sel("finish")+". Is that available? Thank you!";
+  }
+  document.querySelector("#order").addEventListener("change",function(ev){
+    if(ev.target.type==="checkbox"){
+      var n=boxes.filter(function(b){return b.checked}).length;
+      if(n>3){ev.target.checked=false;note.textContent="Three flavors max. Uncheck one to swap."}
+      else note.textContent="";
+    }
+    build();
+  });
+  build();
+  document.getElementById("copy").addEventListener("click",function(){
+    function ok(){note.textContent="Copied. Paste it into your message to us."}
+    function fail(){msg.removeAttribute("readonly");msg.select();note.textContent="Press and hold, then copy the selected text."}
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(msg.value).then(ok,fail)}
+      else{fail()}
+    }catch(e){fail()}
+  });
+})();
+</script>
+</body>
+</html>
