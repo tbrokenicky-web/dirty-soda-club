@@ -76,6 +76,7 @@ textarea{width:100%;min-height:104px;border-radius:16px;border:2px solid var(--l
 .date b{display:block;font-size:1.9rem;font-weight:400}
 .ev h3{margin:0;font-size:1.05rem}
 .ev p{margin:2px 0 0;color:var(--muted);font-size:.95rem}
+.dir{display:inline-block;margin-top:6px;padding:4px 0;font-weight:700;font-size:.95rem;color:var(--cherry)}
 .empty{background:var(--card);border:2px dashed var(--line);border-radius:20px;padding:18px}
 
 /* pay + footer */
@@ -208,7 +209,13 @@ var EVENTS=[
     d.innerHTML="<b></b>"+months[+p[1]-1];d.querySelector("b").textContent=+p[2];
     var t=document.createElement("div"),h=document.createElement("h3");h.textContent=e.name;
     var s=document.createElement("p");s.textContent=[e.time,e.where].filter(Boolean).join(" at ");
-    t.appendChild(h);t.appendChild(s);li.appendChild(d);li.appendChild(t);list.appendChild(li);
+    t.appendChild(h);t.appendChild(s);
+    if(e.where){
+      var a=document.createElement("a");a.className="dir";a.textContent="Get directions";
+      a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(e.where);
+      a.target="_blank";a.rel="noopener";t.appendChild(a);
+    }
+    li.appendChild(d);li.appendChild(t);list.appendChild(li);
   });
 
   /* drink builder */
